@@ -9,8 +9,16 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+# Use Haml for views
+gem 'haml-rails'
+# Use erb2haml 
+gem 'erb2haml'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# Use BootStrap ver4.3.1
+gem 'bootstrap', '~>4.3.1'
+# Use fontAwesome
+gem 'font-awesome-sass', '~> 5.4.1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -22,6 +30,10 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+# Use jQuery
+gem "jquery-rails"
+# Add
+gem 'jquery-turbolinks'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -39,6 +51,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Use RSpec
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
