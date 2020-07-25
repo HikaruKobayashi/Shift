@@ -5,7 +5,7 @@ RSpec.describe "User", type: :request do
   let(:user_params) { attributes_for(:user) }
   let(:invalid_user_params) { attributes_for(:user, name: "") }
 
-  describe 'POST #create' do
+  describe 'Deviseによる認証について' do
     before do
       ActionMailer::Base.deliveries.clear
     end
@@ -15,11 +15,10 @@ RSpec.describe "User", type: :request do
         expect(response.status).to eq 302
       end
 
-      # メール機能を実装していない為、一旦コメントアウト
-      # it '認証メールが送信されること' do
-      #   post user_registration_path, params: { user: user_params }
-      #   expect(ActionMailer::Base.deliveries.size).to eq 1
-      # end
+      it '認証メールが送信されること' do
+        post user_registration_path, params: { user: user_params }
+        expect(ActionMailer::Base.deliveries.size).to eq 1
+      end
 
       it 'createが成功すること' do
         expect do
