@@ -1,0 +1,15 @@
+.container
+  .row
+    .col-12
+      %table.table.table-bordered
+        %thead
+          %tr
+            %th New
+            %th
+        %tbody
+          %tr
+            %td
+              = render 'form'
+            %td
+              %button.btn.btn-secondary
+                = link_to 'Back', posts_path, class: 'button-style'
