@@ -1,0 +1,13 @@
+= form_for @shift do |f|
+  - if @shift.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@shift.errors.count, "error")} prohibited this post from being saved:"
+      %ul
+        - @shift.errors.full_messages.each do |message|
+          %li= message
+
+  -# .field
+  -#   = f.label :shift
+  -#   = f.text_field :shift
+  -# .actions
+  -#   = f.submit 'Save', class: 'btn btn-warning button-style'
