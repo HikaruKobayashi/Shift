@@ -6,8 +6,9 @@
         - @shift.errors.full_messages.each do |message|
           %li= message
 
-  -# .field
-  -#   = f.label :shift
-  -#   = f.text_field :shift
-  -# .actions
-  -#   = f.submit 'Save', class: 'btn btn-warning button-style'
+  .form-group
+    = f.label :name, '名前'
+    = f.text_field :name
+  .form-group
+    = f.label :day, '希望日程'
+    = f.text_field :day
